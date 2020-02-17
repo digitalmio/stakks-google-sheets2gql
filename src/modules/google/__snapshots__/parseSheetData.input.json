@@ -1,0 +1,91 @@
+[
+  {
+    "range": "people!A1:AB1000",
+    "majorDimension": "ROWS",
+    "values": [
+      [
+        "_id",
+        "apiId|hidden",
+        "name|description:This is some description for testing",
+        "height|type:int",
+        "mass|type:int",
+        "hairColor",
+        "skinColor",
+        "eyeColor",
+        "birthYear",
+        "gender",
+        "homeworld|link:planets:single",
+        "films|link:films",
+        "species|link:species:single",
+        "vehicles|link",
+        "starships|link"
+      ],
+      [
+        "lukeskywalker",
+        "1",
+        "Luke Skywalker",
+        "172",
+        "77",
+        "blond",
+        "fair",
+        "blue",
+        "19BBY",
+        "male",
+        "tatooine",
+        "newhope:",
+        "",
+        "123"
+      ],
+      [
+        "c3po",
+        "2",
+        "C-3PO",
+        "167",
+        "75",
+        "n/a",
+        "gold",
+        "yellow",
+        "112BBY",
+        "n/a",
+        "tatooine",
+        "newhope:",
+        "",
+        "123"
+      ]
+    ]
+  },
+  {
+    "range": "planets!A1:Z1000",
+    "majorDimension": "ROWS",
+    "values": [
+      [
+        "_id",
+        "name",
+        "rorationPeriod",
+        "orbitalPeriod",
+        "diameter",
+        "climate",
+        "gravity",
+        "terrain",
+        "surfaceWater",
+        "population",
+        "residents|link:people",
+        "films|link"
+      ],
+      [
+        "tatooine",
+        "Tatooine",
+        "23",
+        "304",
+        "10465",
+        "arid",
+        "1 standard",
+        "desert",
+        "1",
+        "200000",
+        "lukeskywalker:c3po",
+        "newhope:"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,255 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Google API module should parse data for the Google data array 1`] = `
+Array [
+  Object {
+    "data": Array [
+      Object {
+        "__row__": 2,
+        "_id": "lukeskywalker",
+        "apiId": "1",
+        "birthYear": "19BBY",
+        "eyeColor": "blue",
+        "films": Array [
+          "newhope",
+        ],
+        "gender": "male",
+        "hairColor": "blond",
+        "height": 172,
+        "homeworld": "tatooine",
+        "mass": 77,
+        "name": "Luke Skywalker",
+        "skinColor": "fair",
+        "species": undefined,
+        "vehicles": Array [
+          "123",
+        ],
+      },
+      Object {
+        "__row__": 3,
+        "_id": "c3po",
+        "apiId": "2",
+        "birthYear": "112BBY",
+        "eyeColor": "yellow",
+        "films": Array [
+          "newhope",
+        ],
+        "gender": "n/a",
+        "hairColor": "n/a",
+        "height": 167,
+        "homeworld": "tatooine",
+        "mass": 75,
+        "name": "C-3PO",
+        "skinColor": "gold",
+        "species": undefined,
+        "vehicles": Array [
+          "123",
+        ],
+      },
+    ],
+    "headers": Array [
+      Object {
+        "column": "A",
+        "name": "_id",
+        "required": false,
+      },
+      Object {
+        "column": "B",
+        "name": "apiId",
+        "required": false,
+        "specData": undefined,
+        "specType": "hidden",
+      },
+      Object {
+        "column": "C",
+        "name": "name",
+        "required": false,
+        "specData": Array [
+          "This is some description for testing",
+        ],
+        "specType": "description",
+      },
+      Object {
+        "column": "D",
+        "name": "height",
+        "required": false,
+        "specData": Array [
+          "int",
+        ],
+        "specType": "type",
+      },
+      Object {
+        "column": "E",
+        "name": "mass",
+        "required": false,
+        "specData": Array [
+          "int",
+        ],
+        "specType": "type",
+      },
+      Object {
+        "column": "F",
+        "name": "hairColor",
+        "required": false,
+      },
+      Object {
+        "column": "G",
+        "name": "skinColor",
+        "required": false,
+      },
+      Object {
+        "column": "H",
+        "name": "eyeColor",
+        "required": false,
+      },
+      Object {
+        "column": "I",
+        "name": "birthYear",
+        "required": false,
+      },
+      Object {
+        "column": "J",
+        "name": "gender",
+        "required": false,
+      },
+      Object {
+        "column": "K",
+        "name": "homeworld",
+        "required": false,
+        "specData": Array [
+          "planets",
+          "single",
+        ],
+        "specType": "link",
+      },
+      Object {
+        "column": "L",
+        "name": "films",
+        "required": false,
+        "specData": Array [
+          "films",
+        ],
+        "specType": "link",
+      },
+      Object {
+        "column": "M",
+        "name": "species",
+        "required": false,
+        "specData": Array [
+          "species",
+          "single",
+        ],
+        "specType": "link",
+      },
+      Object {
+        "column": "N",
+        "name": "vehicles",
+        "required": false,
+        "specData": undefined,
+        "specType": "link",
+      },
+      Object {
+        "column": "O",
+        "name": "starships",
+        "required": false,
+        "specData": undefined,
+        "specType": "link",
+      },
+    ],
+    "name": "people",
+  },
+  Object {
+    "data": Array [
+      Object {
+        "__row__": 2,
+        "_id": "tatooine",
+        "climate": "arid",
+        "diameter": "10465",
+        "films": Array [
+          "newhope",
+        ],
+        "gravity": "1 standard",
+        "name": "Tatooine",
+        "orbitalPeriod": "304",
+        "population": "200000",
+        "residents": Array [
+          "lukeskywalker",
+          "c3po",
+        ],
+        "rorationPeriod": "23",
+        "surfaceWater": "1",
+        "terrain": "desert",
+      },
+    ],
+    "headers": Array [
+      Object {
+        "column": "A",
+        "name": "_id",
+        "required": false,
+      },
+      Object {
+        "column": "B",
+        "name": "name",
+        "required": false,
+      },
+      Object {
+        "column": "C",
+        "name": "rorationPeriod",
+        "required": false,
+      },
+      Object {
+        "column": "D",
+        "name": "orbitalPeriod",
+        "required": false,
+      },
+      Object {
+        "column": "E",
+        "name": "diameter",
+        "required": false,
+      },
+      Object {
+        "column": "F",
+        "name": "climate",
+        "required": false,
+      },
+      Object {
+        "column": "G",
+        "name": "gravity",
+        "required": false,
+      },
+      Object {
+        "column": "H",
+        "name": "terrain",
+        "required": false,
+      },
+      Object {
+        "column": "I",
+        "name": "surfaceWater",
+        "required": false,
+      },
+      Object {
+        "column": "J",
+        "name": "population",
+        "required": false,
+      },
+      Object {
+        "column": "K",
+        "name": "residents",
+        "required": false,
+        "specData": Array [
+          "people",
+        ],
+        "specType": "link",
+      },
+      Object {
+        "column": "L",
+        "name": "films",
+        "required": false,
+        "specData": undefined,
+        "specType": "link",
+      },
+    ],
+    "name": "planets",
+  },
+]
+`;
