@@ -133,7 +133,8 @@ const formatData = (data, headerSpec) => {
   return data && data !== '' ? data : null;
 };
 
-const parseSchema = (name, headers) => {
+// returns graphQL type
+const parseSchemaType = (name, headers) => {
   const data = headers.map(h => {
     // Link to other sheet
     if (h.specType === 'link') {
@@ -152,6 +153,7 @@ const parseSchema = (name, headers) => {
   }`;
 };
 
+// returns graphQL query
 const parseSchemaQueries = name => {
   return `all${firstUpper(name)}: [${firstUpper(name)}]!
   ${name}(id: String!): ${firstUpper(name)}!`;
@@ -165,7 +167,7 @@ export default data => {
     return {
       name,
       headers,
-      schemaType: parseSchema(name, headers),
+      schemaType: parseSchemaType(name, headers),
       schemaQueries: parseSchemaQueries(name),
       data: parseData(headers, el.values)
     };
