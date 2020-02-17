@@ -114,7 +114,7 @@ Array [
         "column": "H",
         "graphType": "String",
         "name": "skinColor",
-        "required": false,
+        "required": true,
       },
       Object {
         "column": "I",
@@ -132,7 +132,7 @@ Array [
         "column": "K",
         "graphType": "String",
         "name": "gender",
-        "required": false,
+        "required": true,
       },
       Object {
         "column": "L",
@@ -182,114 +182,6 @@ Array [
         "specData": undefined,
         "specType": "link",
       },
-      Object {
-        "column": "Q",
-        "graphType": "String",
-        "name": "few",
-        "required": false,
-      },
-      Object {
-        "column": "R",
-        "graphType": "String",
-        "name": "more",
-        "required": false,
-      },
-      Object {
-        "column": "S",
-        "graphType": "String",
-        "name": "to",
-        "required": false,
-      },
-      Object {
-        "column": "T",
-        "graphType": "String",
-        "name": "go",
-        "required": false,
-      },
-      Object {
-        "column": "U",
-        "graphType": "String",
-        "name": "over",
-        "required": false,
-      },
-      Object {
-        "column": "V",
-        "graphType": "String",
-        "name": "the",
-        "required": false,
-      },
-      Object {
-        "column": "W",
-        "graphType": "String",
-        "name": "alphabet",
-        "required": false,
-      },
-      Object {
-        "column": "X",
-        "graphType": "String",
-        "name": "aaa",
-        "required": false,
-      },
-      Object {
-        "column": "Y",
-        "graphType": "String",
-        "name": "vvv",
-        "required": false,
-      },
-      Object {
-        "column": "Z",
-        "graphType": "String",
-        "name": "few",
-        "required": false,
-      },
-      Object {
-        "column": "AA",
-        "graphType": "String",
-        "name": "more",
-        "required": false,
-      },
-      Object {
-        "column": "AB",
-        "graphType": "String",
-        "name": "to",
-        "required": false,
-      },
-      Object {
-        "column": "AC",
-        "graphType": "String",
-        "name": "go",
-        "required": false,
-      },
-      Object {
-        "column": "AD",
-        "graphType": "String",
-        "name": "over",
-        "required": false,
-      },
-      Object {
-        "column": "AE",
-        "graphType": "String",
-        "name": "the",
-        "required": false,
-      },
-      Object {
-        "column": "AF",
-        "graphType": "String",
-        "name": "alphabet",
-        "required": false,
-      },
-      Object {
-        "column": "AG",
-        "graphType": "String",
-        "name": "aaa",
-        "required": false,
-      },
-      Object {
-        "column": "AH",
-        "graphType": "String",
-        "name": "vvv",
-        "required": false,
-      },
     ],
     "name": "people",
     "schemaQueries": "allPeople: [People]!
@@ -302,33 +194,15 @@ Array [
  height: Int 
  mass: Int 
  hairColor: String 
- skinColor: String 
+ skinColor: String! 
  eyeColor: String 
  birthYear: String 
- gender: String 
+ gender: String! 
  homeworld: Planets 
  films: [Films] 
  species: Species 
  vehicles: [Vehicles] 
- starships: [Starships] 
- few: String 
- more: String 
- to: String 
- go: String 
- over: String 
- the: String 
- alphabet: String 
- aaa: String 
- vvv: String 
- few: String 
- more: String 
- to: String 
- go: String 
- over: String 
- the: String 
- alphabet: String 
- aaa: String 
- vvv: String
+ starships: [Starships]
   }",
   },
   Object {

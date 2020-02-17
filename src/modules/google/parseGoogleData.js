@@ -130,7 +130,7 @@ const formatData = (data, headerSpec) => {
   }
 
   // by default return string
-  return data && data !== '' ? data : null;
+  return data;
 };
 
 // returns graphQL type

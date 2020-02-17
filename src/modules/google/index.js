@@ -3,7 +3,7 @@ import got from 'got';
 import qs from 'qs';
 
 import redis from '../../config/redis';
-import parseSheetData from './parseSheetData';
+import parseGoogleData from './parseGoogleData';
 
 export default () => {
   const apiBaseUrl = 'https://sheets.googleapis.com/v4/spreadsheets/';
