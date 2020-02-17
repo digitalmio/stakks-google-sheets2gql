@@ -27,6 +27,8 @@ const columnNames = [
   'Z'
 ];
 
+const firstUpper = string => string.charAt(0).toUpperCase() + string.slice(1);
+
 const getColumnName = number => {
   if (number > columnNames.length - 1) {
     const letterIndex = number - columnNames.length; // as number is 0 based, length is 1
@@ -39,6 +41,25 @@ const getName = el => {
   return el.range.split('!')[0];
 };
 
+const getGraphType = ({ specType: type, specData: data, name }) => {
+  const mapping = {
+    int: 'Int',
+    bool: 'Boolean',
+    float: 'Float',
+    id: 'ID'
+  };
+
+  if (name === 'id') {
+    return mapping.id;
+  }
+
+  if (type === 'type') {
+    return mapping[data[0]];
+  }
+
+  return 'String';
+};
+
 const getHeaders = values => {
   const [headers, ...rest] = values;
 
@@ -49,7 +70,7 @@ const getHeaders = values => {
     // divide string by | to get header name and spec
     const [name, spec] = el.split('|');
     const isRequired = name.slice(-1) === '!' || name === 'id';
-    data.name = isRequired ? name.slice(0, -1) : name;
+    data.name = isRequired && name !== 'id' ? name.slice(0, -1) : name;
     data.required = isRequired;
     data.column = getColumnName(i);
 
@@ -59,6 +80,8 @@ const getHeaders = values => {
       data.specType = specType;
       data.specData = specData.length ? specData : undefined;
     }
+
+    data.graphType = getGraphType(data);
 
     return data;
   });
@@ -110,13 +133,40 @@ const formatData = (data, headerSpec) => {
   return data && data !== '' ? data : null;
 };
 
+const parseSchema = (name, headers) => {
+  const data = headers.map(h => {
+    // Link to other sheet
+    if (h.specType === 'link') {
+      // TODO: check if target exists!
+      const target = h.specData?.[0] ? firstUpper(h.specData?.[0]) : firstUpper(h.name);
+      const single = h.specData?.[1] === 'single';
+      return `${h.name}: ${single ? '' : '['}${target}${single ? '' : ']'}${h.required ? '!' : ''}`;
+    }
+
+    // standard non-link type
+    return `${h.name}: ${h.graphType}${h.required ? '!' : ''}`;
+  });
+
+  return `type ${firstUpper(name)} {
+    ${data.join(' \n ')}
+  }`;
+};
+
+const parseSchemaQueries = name => {
+  return `all${firstUpper(name)}: [${firstUpper(name)}]!
+  ${name}(id: String!): ${firstUpper(name)}!`;
+};
+
 export default data => {
   return data.map((el, acc) => {
+    const name = getName(el);
     const headers = getHeaders(el.values);
 
     return {
-      name: getName(el),
+      name,
       headers,
+      schemaType: parseSchema(name, headers),
+      schemaQueries: parseSchemaQueries(name),
       data: parseData(headers, el.values)
     };
   });

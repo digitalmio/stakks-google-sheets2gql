@@ -68,7 +68,6 @@ export default () => {
       const dataReq = await got
         .get(`${apiBaseUrl}${sheetId}/values:batchGet?${sheetQs}&access_token=${accessToken}`)
         .json();
-      console.log(JSON.stringify(dataReq.valueRanges));
       return parseSheetData(dataReq.valueRanges);
     } catch (e) {
       throw Error(e);
