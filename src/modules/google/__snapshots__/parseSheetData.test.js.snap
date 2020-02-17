@@ -6,7 +6,6 @@ Array [
     "data": Array [
       Object {
         "__row__": 2,
-        "_id": "lukeskywalker",
         "apiId": "1",
         "birthYear": "19BBY",
         "eyeColor": "blue",
@@ -17,6 +16,8 @@ Array [
         "hairColor": "blond",
         "height": 172,
         "homeworld": "tatooine",
+        "id": "lukeskywalker",
+        "isSomething": true,
         "mass": 77,
         "name": "Luke Skywalker",
         "skinColor": "fair",
@@ -27,7 +28,6 @@ Array [
       },
       Object {
         "__row__": 3,
-        "_id": "c3po",
         "apiId": "2",
         "birthYear": "112BBY",
         "eyeColor": "yellow",
@@ -38,6 +38,8 @@ Array [
         "hairColor": "n/a",
         "height": 167,
         "homeworld": "tatooine",
+        "id": "c3po",
+        "isSomething": false,
         "mass": 75,
         "name": "C-3PO",
         "skinColor": "gold",
@@ -50,11 +52,13 @@ Array [
     "headers": Array [
       Object {
         "column": "A",
-        "name": "_id",
-        "required": false,
+        "graphType": "ID",
+        "name": "id",
+        "required": true,
       },
       Object {
         "column": "B",
+        "graphType": "String",
         "name": "apiId",
         "required": false,
         "specData": undefined,
@@ -62,6 +66,17 @@ Array [
       },
       Object {
         "column": "C",
+        "graphType": "Boolean",
+        "name": "isSomething",
+        "required": false,
+        "specData": Array [
+          "bool",
+        ],
+        "specType": "type",
+      },
+      Object {
+        "column": "D",
+        "graphType": "String",
         "name": "name",
         "required": false,
         "specData": Array [
@@ -70,7 +85,8 @@ Array [
         "specType": "description",
       },
       Object {
-        "column": "D",
+        "column": "E",
+        "graphType": "Int",
         "name": "height",
         "required": false,
         "specData": Array [
@@ -79,7 +95,8 @@ Array [
         "specType": "type",
       },
       Object {
-        "column": "E",
+        "column": "F",
+        "graphType": "Int",
         "name": "mass",
         "required": false,
         "specData": Array [
@@ -88,32 +105,38 @@ Array [
         "specType": "type",
       },
       Object {
-        "column": "F",
+        "column": "G",
+        "graphType": "String",
         "name": "hairColor",
         "required": false,
       },
       Object {
-        "column": "G",
+        "column": "H",
+        "graphType": "String",
         "name": "skinColor",
         "required": false,
       },
       Object {
-        "column": "H",
+        "column": "I",
+        "graphType": "String",
         "name": "eyeColor",
         "required": false,
       },
       Object {
-        "column": "I",
+        "column": "J",
+        "graphType": "String",
         "name": "birthYear",
         "required": false,
       },
       Object {
-        "column": "J",
+        "column": "K",
+        "graphType": "String",
         "name": "gender",
         "required": false,
       },
       Object {
-        "column": "K",
+        "column": "L",
+        "graphType": "String",
         "name": "homeworld",
         "required": false,
         "specData": Array [
@@ -123,7 +146,8 @@ Array [
         "specType": "link",
       },
       Object {
-        "column": "L",
+        "column": "M",
+        "graphType": "String",
         "name": "films",
         "required": false,
         "specData": Array [
@@ -132,7 +156,8 @@ Array [
         "specType": "link",
       },
       Object {
-        "column": "M",
+        "column": "N",
+        "graphType": "String",
         "name": "species",
         "required": false,
         "specData": Array [
@@ -142,21 +167,169 @@ Array [
         "specType": "link",
       },
       Object {
-        "column": "N",
+        "column": "O",
+        "graphType": "String",
         "name": "vehicles",
         "required": false,
         "specData": undefined,
         "specType": "link",
       },
       Object {
-        "column": "O",
+        "column": "P",
+        "graphType": "String",
         "name": "starships",
         "required": false,
         "specData": undefined,
         "specType": "link",
       },
+      Object {
+        "column": "Q",
+        "graphType": "String",
+        "name": "few",
+        "required": false,
+      },
+      Object {
+        "column": "R",
+        "graphType": "String",
+        "name": "more",
+        "required": false,
+      },
+      Object {
+        "column": "S",
+        "graphType": "String",
+        "name": "to",
+        "required": false,
+      },
+      Object {
+        "column": "T",
+        "graphType": "String",
+        "name": "go",
+        "required": false,
+      },
+      Object {
+        "column": "U",
+        "graphType": "String",
+        "name": "over",
+        "required": false,
+      },
+      Object {
+        "column": "V",
+        "graphType": "String",
+        "name": "the",
+        "required": false,
+      },
+      Object {
+        "column": "W",
+        "graphType": "String",
+        "name": "alphabet",
+        "required": false,
+      },
+      Object {
+        "column": "X",
+        "graphType": "String",
+        "name": "aaa",
+        "required": false,
+      },
+      Object {
+        "column": "Y",
+        "graphType": "String",
+        "name": "vvv",
+        "required": false,
+      },
+      Object {
+        "column": "Z",
+        "graphType": "String",
+        "name": "few",
+        "required": false,
+      },
+      Object {
+        "column": "AA",
+        "graphType": "String",
+        "name": "more",
+        "required": false,
+      },
+      Object {
+        "column": "AB",
+        "graphType": "String",
+        "name": "to",
+        "required": false,
+      },
+      Object {
+        "column": "AC",
+        "graphType": "String",
+        "name": "go",
+        "required": false,
+      },
+      Object {
+        "column": "AD",
+        "graphType": "String",
+        "name": "over",
+        "required": false,
+      },
+      Object {
+        "column": "AE",
+        "graphType": "String",
+        "name": "the",
+        "required": false,
+      },
+      Object {
+        "column": "AF",
+        "graphType": "String",
+        "name": "alphabet",
+        "required": false,
+      },
+      Object {
+        "column": "AG",
+        "graphType": "String",
+        "name": "aaa",
+        "required": false,
+      },
+      Object {
+        "column": "AH",
+        "graphType": "String",
+        "name": "vvv",
+        "required": false,
+      },
     ],
     "name": "people",
+    "schemaQueries": "allPeople: [People]!
+  people(id: String!): People!",
+    "schemaType": "type People {
+    id: ID! 
+ apiId: String 
+ isSomething: Boolean 
+ name: String 
+ height: Int 
+ mass: Int 
+ hairColor: String 
+ skinColor: String 
+ eyeColor: String 
+ birthYear: String 
+ gender: String 
+ homeworld: Planets 
+ films: [Films] 
+ species: Species 
+ vehicles: [Vehicles] 
+ starships: [Starships] 
+ few: String 
+ more: String 
+ to: String 
+ go: String 
+ over: String 
+ the: String 
+ alphabet: String 
+ aaa: String 
+ vvv: String 
+ few: String 
+ more: String 
+ to: String 
+ go: String 
+ over: String 
+ the: String 
+ alphabet: String 
+ aaa: String 
+ vvv: String
+  }",
   },
   Object {
     "data": Array [
@@ -184,56 +357,67 @@ Array [
     "headers": Array [
       Object {
         "column": "A",
+        "graphType": "String",
         "name": "_id",
         "required": false,
       },
       Object {
         "column": "B",
+        "graphType": "String",
         "name": "name",
         "required": false,
       },
       Object {
         "column": "C",
+        "graphType": "String",
         "name": "rorationPeriod",
         "required": false,
       },
       Object {
         "column": "D",
+        "graphType": "String",
         "name": "orbitalPeriod",
         "required": false,
       },
       Object {
         "column": "E",
+        "graphType": "String",
         "name": "diameter",
         "required": false,
       },
       Object {
         "column": "F",
+        "graphType": "String",
         "name": "climate",
         "required": false,
       },
       Object {
         "column": "G",
+        "graphType": "String",
         "name": "gravity",
         "required": false,
       },
       Object {
         "column": "H",
+        "graphType": "String",
         "name": "terrain",
         "required": false,
       },
       Object {
         "column": "I",
+        "graphType": "String",
         "name": "surfaceWater",
         "required": false,
       },
       Object {
         "column": "J",
+        "graphType": "String",
         "name": "population",
         "required": false,
       },
       Object {
         "column": "K",
+        "graphType": "String",
         "name": "residents",
         "required": false,
         "specData": Array [
@@ -243,6 +427,7 @@ Array [
       },
       Object {
         "column": "L",
+        "graphType": "String",
         "name": "films",
         "required": false,
         "specData": undefined,
@@ -250,6 +435,22 @@ Array [
       },
     ],
     "name": "planets",
+    "schemaQueries": "allPlanets: [Planets]!
+  planets(id: String!): Planets!",
+    "schemaType": "type Planets {
+    _id: String 
+ name: String 
+ rorationPeriod: String 
+ orbitalPeriod: String 
+ diameter: String 
+ climate: String 
+ gravity: String 
+ terrain: String 
+ surfaceWater: String 
+ population: String 
+ residents: [People] 
+ films: [Films]
+  }",
   },
 ]
 `;
