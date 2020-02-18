@@ -1,41 +1,5 @@
-const columnNames = [
-  'A',
-  'B',
-  'C',
-  'D',
-  'E',
-  'F',
-  'G',
-  'H',
-  'I',
-  'J',
-  'K',
-  'L',
-  'M',
-  'N',
-  'O',
-  'P',
-  'Q',
-  'R',
-  'S',
-  'T',
-  'U',
-  'V',
-  'W',
-  'X',
-  'Y',
-  'Z'
-];
-
-const firstUpper = string => string.charAt(0).toUpperCase() + string.slice(1);
-
-const getColumnName = number => {
-  if (number > columnNames.length - 1) {
-    const letterIndex = number - columnNames.length; // as number is 0 based, length is 1
-    return 'A' + columnNames[letterIndex];
-  }
-  return columnNames[number];
-};
+import firstUpper from '../../utils/firstUpper';
+import getColumnName from './columnName';
 
 const getName = el => {
   return el.range.split('!')[0];
